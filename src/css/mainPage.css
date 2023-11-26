@@ -1,0 +1,176 @@
+
+.background{
+    position: absolute;
+  background-color: aqua;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    z-index: -1000;
+    background-image:linear-gradient(
+        rgba(0, 0, 0, .2),
+        rgba(0, 0, 0, .3)
+      ), url('../images/island.jpg');
+      /* overflow: hidden; */
+
+}
+
+
+
+.title{
+    font-size: 72px;
+    font-weight: 900;
+}
+
+.title-i{
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.text{
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    color: white;
+    font-weight: 500;
+padding-top: 16px;
+}
+
+.section{
+    padding-left: 200px;
+}
+
+.container{
+    max-width: 700px;
+    display: none;
+}
+.container.wrraper-island{
+    display: block;
+}
+
+
+.wrraper-forest{
+
+}
+
+.wrraper-social-link{
+    position: absolute;
+    right: 30;
+    bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 8px;
+    gap: 16px;
+}
+
+.social-link{
+    color: white;
+}
+.btn-more{
+    margin-top: 16px;
+    padding: 10px;
+}
+
+.section-home{
+    position: relative;
+}
+
+.slider{
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.slider-item{
+    width: 12px;
+    height: 12px;
+    background-color:white;
+    border-radius: 50%;
+cursor: pointer;
+}
+
+.slider-item.active{
+    background-color: blue;
+}
+
+.photo{
+    position: absolute;
+    background-color: rgb(2, 5, 5);
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    clip-path: circle(0% at 0 50%);
+}
+.photo.active{
+    transition: all 2s ease;
+    clip-path: circle(150% at 0 0%);
+
+    transition-property: clip-path ;
+
+ 
+}
+.photo.activenext{
+    /* transition: all 2s ease; */
+    clip-path: circle(150% at 0 0%);
+
+    transition-property: clip-path ;
+
+ 
+}
+
+.photo.prev{
+    /* clip-path: circle(0% at 0 50%); */
+
+    clip-path: circle(150% at 0% 0%);
+    transition: all 2s ease;
+}
+
+
+.photo.next{
+    /* clip-path: none */
+    clip-path: circle(0% at 0 50%);
+
+    transition: all 2s ease;
+
+}
+
+.photo-island{
+    background-image:linear-gradient(
+        rgba(0, 0, 0, .2),
+        rgba(0, 0, 0, .3)
+      ), url('../images/island.jpg');
+}
+.photo-forest{
+    background-image:linear-gradient(
+        rgba(0, 0, 0, .2),
+        rgba(0, 0, 0, .3)
+      ), url('../images/forest.jpg');
+ 
+}
+.photo-camping{
+    background-image:linear-gradient(
+        rgba(0, 0, 0, .2),
+        rgba(0, 0, 0, .3)
+      ), url('../images/camping.jpg');
+}
+
+.photo-adventures{
+    background-image:linear-gradient(
+        rgba(0, 0, 0, .2),
+        rgba(0, 0, 0, .3)
+      ), url('../images/adventures.jpg');
+}
+.photo-road-trip{
+    background-image:linear-gradient(
+        rgba(0, 0, 0, .2),
+        rgba(0, 0, 0, .3)
+      ), url('../images/road-trip.jpg');
+}
+
+svg{
+    fill: white;
+}

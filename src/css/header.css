@@ -1,0 +1,37 @@
+header{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+
+}
+
+.header-wrraper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo{
+font-size: 24px;
+font-weight: 700;
+line-height: 1.8;
+letter-spacing: 0.03em;
+/* margin-left: 100px; */
+margin-right: auto;
+}
+nav{
+    margin-right: 100px;
+}
+.nav-list{
+    display: flex;
+    justify-content: space-around;
+}
+.nav-item a{
+color: white;
+font-size: 18px;
+}
+
+.nav-item:not(:last-child){
+    margin-right: 16px;
+}
