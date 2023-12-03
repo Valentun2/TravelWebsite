@@ -1,10 +1,10 @@
-const g = document.querySelectorAll('.j');
-const elBackground = document.querySelector('.background');
+const photoEl = document.querySelectorAll('.photo-js');
+// const titleArr = document.querySelectorAll('.title-wrraper');
 const elSlider = document.querySelectorAll('.slider-item-js');
 const arr = document.querySelectorAll('.js-container');
 const slider = document.querySelector('.slider');
 slider.addEventListener('click', handleClick);
-
+console.log(arr);
 let prev = 0;
 function handleClick(evt) {
   if (!evt.target.classList.contains('slider-item-js')) {
@@ -12,33 +12,37 @@ function handleClick(evt) {
   }
 
   elSlider.forEach((el, i) => {
-    g[i].classList.remove('prev');
+    // titleArr[i].classList.remove('active');
 
-    g[i].classList.remove('next');
 
-    g[i].classList.remove('activenext');
-    g[i].classList.remove('active');
+
+    photoEl[i].classList.remove('prev');
+
+    photoEl[i].classList.remove('next');
+
+    photoEl[i].classList.remove('activenext');
+    photoEl[i].classList.remove('active');
     el.classList.remove('active');
     arr[i].style.display = 'none';
   });
 
 
+  arr[evt.target.id - 1].style.display = 'block';
 
   if (evt.target.id < prev && prev !== 0) {
     console.log('object');
  
-    g[prev - 1].classList.add('next');
-    g[evt.target.id - 1].classList.add('activenext');
+    photoEl[prev - 1].classList.add('next');
+    photoEl[evt.target.id - 1].classList.add('activenext');
   } else {
-    g[evt.target.id - 1].classList.add('active');
+    photoEl[evt.target.id - 1].classList.add('active');
     if (prev === 0) {
-      g[0].classList.add('prev');
+      photoEl[0].classList.add('prev');
     } else {
-      g[prev - 1].classList.add('prev');
+      photoEl[prev - 1].classList.add('prev');
     }
   }
   evt.target.classList.add('active');
-
-  arr[evt.target.id - 1].style.display = 'block';
+// titleArr[evt.target.id - 1].classList.add('active')
   prev = evt.target.id;
 }

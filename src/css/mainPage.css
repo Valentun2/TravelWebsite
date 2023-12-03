@@ -173,4 +173,20 @@ cursor: pointer;
 
 svg{
     fill: white;
+    transition: fill 1s ease;
 }
+svg:hover,
+svg:focus{
+    fill: blue;
+}
+
+/* .title-wrraper{
+    transform: translateX(-100vw);
+    transition: transform 2s ease;
+}
+
+.title-wrraper.active{
+    transform: translateX(0);
+
+
+} */

@@ -17,7 +17,6 @@ font-size: 24px;
 font-weight: 700;
 line-height: 1.8;
 letter-spacing: 0.03em;
-/* margin-left: 100px; */
 margin-right: auto;
 }
 nav{
@@ -27,9 +26,32 @@ nav{
     display: flex;
     justify-content: space-around;
 }
+
 .nav-item a{
+    font-weight: 500;
 color: white;
 font-size: 18px;
+transition: color 500ms ease;
+display: block;
+position: relative;
+}
+
+.nav-item a::before{
+    
+        content: '';
+        height: 4px;
+        width: 0;
+        border-radius: 2px;
+        display: block;
+        background-color: white;
+        position: absolute;
+        bottom: -3px;
+      transition: all .3s ease;
+}
+
+.nav-item a:hover::before{
+    width: 100%;
+
 }
 
 .nav-item:not(:last-child){
