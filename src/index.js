@@ -46,3 +46,23 @@ function handleClick(evt) {
 // titleArr[evt.target.id - 1].classList.add('active')
   prev = evt.target.id;
 }
+
+
+
+
+
+
+
+
+const openMenu = document.querySelector('.js-open-menu')
+const menu = document.querySelector('.js-menu')
+const overflow= document.querySelector('.js-overflow')
+const nav = document.querySelector('.js-nav')
+
+openMenu.addEventListener('click',handleClickOpenMenu)
+function handleClickOpenMenu(evt) {
+  menu.classList.toggle('active')
+  overflow.classList.toggle('active')
+  nav.classList.toggle('active')
+
+}

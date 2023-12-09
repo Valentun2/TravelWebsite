@@ -19,22 +19,73 @@ line-height: 1.8;
 letter-spacing: 0.03em;
 margin-right: auto;
 }
+
 nav{
     margin-right: 100px;
+    position: absolute;
+    display: none;
+    bottom: calc(50% - 450px);
+    left: calc(50%- 45px);
 }
+nav.active{
+    display: block;
+}
+
+@media screen and (min-width: 767px) {
+    nav{
+        margin-right: 100px;
+        position: unset;
+        display: block;
+   
+    }
+  }
+
 .nav-list{
     display: flex;
-    justify-content: space-around;
+ flex-direction: column;
+ gap: 32px;
+ justify-content: space-around;
+ align-items: center;
 }
+
+@media screen and (min-width: 767px) {
+    .nav-list{
+        flex-direction: row;
+        gap: 16px;
+    }
+  }
+
+
+  .menu-burger-open{
+    background-color: transparent;
+    border: none;
+  }
+
+  @media screen and (min-width: 767px) {
+    
+    .menu-burger-open{
+        display: none;
+    }
+  }
+
+
+
 
 .nav-item a{
     font-weight: 500;
-color: white;
+color: black;
 font-size: 18px;
 transition: color 500ms ease;
 display: block;
 position: relative;
 }
+
+@media screen and (min-width: 767px) {
+    
+    .nav-item a{
+     color: white;
+    }
+  }
 
 .nav-item a::before{
     
@@ -43,17 +94,34 @@ position: relative;
         width: 0;
         border-radius: 2px;
         display: block;
-        background-color: white;
+        background-color: black;
         position: absolute;
         bottom: -3px;
       transition: all .3s ease;
 }
 
+
+@media screen and (min-width: 767px) {
+    
+    .nav-item a::before{
+        background-color: white;
+
+    }
+  }
+
+
 .nav-item a:hover::before{
     width: 100%;
-
 }
+@media screen and (min-width: 767px) {
+    
+    .nav-item:not(:last-child){
+        margin-right: 16px;
+    }
+  }
 
-.nav-item:not(:last-child){
-    margin-right: 16px;
+
+
+.menu-burger-open{
+    z-index: 200;
 }
